@@ -6,7 +6,6 @@ inputs = inputs.read().strip().split("\n\n")
 inputs_sums = []
 
 for input in inputs:
-    input_values = input.split("\n")
     input_sum = np.sum(np.asarray(input.split("\n"), dtype=int))
     inputs_sums.append(input_sum)
 
