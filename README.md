@@ -16,8 +16,3 @@ Massive thanks to Eric Wastl for the challenges.
   .d$$@$$$$\$$ib.
       d$$i$$b
      d\$$$$@$b
-  .d$@$$\$$$$$@b.
-.d$$$$i$$$\$$$$$$b.
-        ###
-        ###
-        ### 
