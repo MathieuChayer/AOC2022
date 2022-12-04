@@ -13,6 +13,4 @@ Massive thanks to Eric Wastl for the challenges.
        d$$@b
       d\$$$ib
     .d$$$\$$$b
-  .d$$@$$$$\$$ib.
-      d$$i$$b
-     d\$$$$@$b
+
