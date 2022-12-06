@@ -1,6 +1,7 @@
 import numpy as np
 import copy
 
+# Simulate operation of CrateMover9000
 def CrateMover9000(move):
     global stacks9000
 
@@ -8,6 +9,7 @@ def CrateMover9000(move):
         stacks9000[move[2]].insert(0,stacks9000[move[1]][0])
         stacks9000[move[1]].pop(0)
 
+# Simulate operation of CrateMover9001
 def CrateMover9001(move):
     global stacks9001
 
@@ -16,17 +18,17 @@ def CrateMover9001(move):
     for i in range(move[0]):
         stacks9001[move[1]].pop(0)
 
+# MAIN CODE
 inputs = open('day5.txt')
 inputs = inputs.read().strip().split("\n\n")
 
-# Split the input into moves and stacks
+# Parse the moves
 moves = inputs[1].replace("move ","")
 moves = moves.replace("to ","")
 moves = moves.replace("from ","")
 moves = moves.split("\n")
 
-#moves(i).split() pour isoler les chiffres...
-
+# Parse the stacks
 stacks = inputs[0].split("\n")
 
 # Find number of columns
@@ -49,17 +51,18 @@ for n in range(len(stacks)-1):
         if line[k] != " ":
             dict_stacks[k+1].append(line[k])
 
+# Create copy for both machines
 stacks9000 = copy.deepcopy(dict_stacks)
 stacks9001 = copy.deepcopy(dict_stacks)
 
+# Execute the moves
 for move in moves:
-
     move = move.split()
     move = [int(x) for x in move]
-
     CrateMover9000(move)
     CrateMover9001(move)
 
+# Compose and print answers
 answer9000 = ""
 answer9001 = ""
 
