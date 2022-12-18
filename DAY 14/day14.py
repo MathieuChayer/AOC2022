@@ -82,12 +82,14 @@ X,Y = np.meshgrid(y,x,indexing="ij")
 point = [(500,0)]
 
 Z = np.zeros_like(X)
-
 for i in x:
     for j in y:
         if (i,j) in Rocks:
             Z[np.where(y==j),np.where(x==i)]=1
 
+plt.imshow(Z,cmap="gray")
+plt.axis("off")
+plt.show()
 
 count_blocks = 0
 while not any(Z[-1,:]):
